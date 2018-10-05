@@ -1,0 +1,109 @@
+body
+{
+    margin-top:3%;
+    margin-bottom:3%;
+}
+.maindiv
+{
+    box-shadow:0px 7px 50px black;
+    border:1px solid #96a3aa;
+    border-radius:10px;
+}
+.progressbar {
+	display: none;
+	width: 200px;
+	background-color: #f5f0f0;
+	border: 1px solid #cccccc;
+	min-height: 25px;
+}
+
+.zipprogress {
+	max-width: 1%;
+    min-height: 25px;
+    background-color: #0a0869;
+    display: block;
+}
+
+.headpart .headpartleft
+{
+	float:left;
+	padding:1%;
+}
+.headpart .headpartleft font
+{
+	font-size:28px;
+}
+.headpart .headpartright
+{
+	float:left;
+	margin-top:2.7%;
+}
+.headpart .headpartright font a
+{
+    color:#fff;
+	background:#0FABDD;
+	padding:3%;
+	border-radius:10px;
+	text-decoration:none;
+	margin:0.5%;
+	border:1px solid #fff;	
+}
+.headpart .headpartright font a:hover
+{
+	background:#fff;
+	color:#000;
+	border:1px solid #0FABDD;
+	transition:0.3s;
+}
+
+
+.bodypart1
+{
+	
+	border:2px solid #0FABDD;
+}
+.bodypartline
+{
+    background:#96a3aa;
+    color:#fff;
+    padding:2%;
+}
+.bodypart2 a
+{
+	text-decoration:none;
+	color:#fff;
+	background:#0FABDD;
+	padding:1%;
+	border-radius:10px;
+	margin:2%;
+	border:1px solid #0FABDD;
+}
+.bodypart2 a:hover
+{
+    background:#fff;
+	color:#000;
+	border:1px solid #0FABDD;
+	transition:0.3s;
+}
+
+.btnlink
+{
+    text-decoration:none;
+	color:#fff;background:#0FABDD;
+	padding:1%;
+	border-radius:10px;
+	border:1px solid #fff;
+}
+.btnlink:hover
+{
+    background:#fff;
+	color:#000;
+	border:1px solid #0FABDD;
+	transition:0.3s;
+}
+.footer
+{
+	background:#0FABDD;
+	color:#fff;
+	border-radius:0px 0px 8px 8px;
+}
