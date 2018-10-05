@@ -8,8 +8,8 @@ if(isset($_SESSION['albummoveall']))
 include_once 'vendor/autoload.php';
 
 $client = new Google_Client();
-$client->setClientId('332327935943-416fjeevr8n1bsmfnsh4u15hvdp7r7m2.apps.googleusercontent.com');
-$client->setClientSecret('RIzv0Qy7oypyLQsd_wnMsNF-');
+$client->setClientId('{Client-Id}');
+$client->setClientSecret('{Client-Secret}');
 $client->setRedirectUri('https://gaurangsavaliyart.herokuapp.com/driveuploadall.php');
 $client->setScopes(array('https://www.googleapis.com/auth/drive.file'));
 
