@@ -3,8 +3,8 @@ if(!session_id())
 	session_start();
 require_once 'Facebook/autoload.php';
 
-$app_id='2079316965616123';
-$app_secret='844fd17e189df932e3a3ea1327f855ce';
+$app_id='{App-Id}';
+$app_secret='{App-Secret}';
 $permissions = ['email,user_photos']; // Optional permissions
 $callbackUrl='https://gaurangsavaliyart.herokuapp.com/callback.php';
 $logoutURL='https://gaurangsavaliyart.herokuapp.com/logout.php';
