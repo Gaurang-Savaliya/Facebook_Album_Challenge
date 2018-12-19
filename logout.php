@@ -1,8 +1,7 @@
 <?php
 require_once 'config.php';
 
-$txt = "|Logout - ".$_SESSION['usr']." |";
-$myfile = file_put_contents('temp/logs.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+
 
 if(is_file('temp/albumall/'.$_SESSION['usr'].'/all_'.$_SESSION['usr'].'.zip'))
 {
