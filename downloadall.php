@@ -1,8 +1,7 @@
 <?php
 $username=explode("_",$_GET['id']);
 
-$txt ="|zipall - ".$_SESSION['usr']." |";
-$myfile = file_put_contents('temp/logs.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+
 
 require_once 'config.php';
 
