@@ -1,8 +1,6 @@
 <?php
 require_once 'config.php';
 
-$txt = "|Slideshow|".$_GET['id'];
-$myfile = file_put_contents('logs.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
 
 $album_id=$_GET['id'];
 
