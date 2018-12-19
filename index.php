@@ -2,8 +2,6 @@
 require_once 'config.php';
 //echo '<a href="' . htmlspecialchars($loginUrl) . '"><img src="temp/fbbutton.png"/></a>';
 
-$txt = "| Not Login |";
-$myfile = file_put_contents('temp/logs.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
 
 ?>
 <html>
