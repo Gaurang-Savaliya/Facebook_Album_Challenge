@@ -2,9 +2,7 @@
 ob_start();
 require_once 'config.php';
 
-$txt = "|driveuploadall - ".$_SESSION['usr']." |";
-$myfile = file_put_contents('temp/logs.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
-    
+  
     if(isset($_SESSION['albummoveall']))
 {
    
