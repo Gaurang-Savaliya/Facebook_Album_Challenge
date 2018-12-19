@@ -4,8 +4,6 @@ error_reporting(0);
 $access_token=$_SESSION['fb_access_token'];
 $albumid = $_REQUEST['id'];
 
-$txt ="|zip(".$albumid.") - ".$_SESSION['usr']." |";
-$myfile = file_put_contents('temp/logs.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
 
 
 if($albumid != '') {
