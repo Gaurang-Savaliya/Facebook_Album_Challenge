@@ -1,7 +1,15 @@
-body
-{
-    margin-top:3%;
-    margin-bottom:3%;
+@font-face {
+    font-family: 'DancingScript-Regular';
+    src:url(../fonts/DancingScript-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src:url(fonts/OpenSans-Regular.ttf) format('truetype');
+}
+body{
+	padding:0 0;
+	margin:0 0; 
+	font-family: 'OpenSans-Regular'
 }
 .maindiv
 {
@@ -10,11 +18,13 @@ body
     border-radius:10px;
 }
 .progressbar {
+    position:absolute;
 	display: none;
-	width: 200px;
+	width: 91%;
 	background-color: #f5f0f0;
 	border: 1px solid #cccccc;
 	min-height: 25px;
+	
 }
 
 .zipprogress {
@@ -101,9 +111,187 @@ body
 	border:1px solid #0FABDD;
 	transition:0.3s;
 }
+
+/*--------------------Head Part Start---------------*/
+
+
+.head
+{
+    color:#fff;
+    background: #04af82;
+    padding-top: 0.8%;
+     
+}
+.head1
+{
+   padding:1%;
+   
+}
+.head1:hover
+{
+    background: #fff;
+    color: #000;
+    padding:1%;
+    transition: 0.5s;
+    
+    border-radius: 50px;
+}
+@media only screen and (max-width: 768px)
+{
+
+	.head1
+	{
+		margin-top: 5%;
+	}
+	.head2
+	{
+		margin-top: 3%;
+		padding: 1%;
+	}
+}
+.head2 ul li
+{
+    display: inline;
+    list-style: none;
+
+}
+.head2 ul li a
+{
+    text-decoration: none;
+    padding: 3% 9.5%;
+    color: #fff;
+}
+.head2 ul li a:hover
+{
+     background: #fff;
+    color: #000;
+    padding: 3% 9.5%;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+/*--------------Head Part End--------------*/
+
+/*--------------Main part Start--------------*/
+
+.albumbox
+{
+    
+    padding: 2%;
+
+}
+.album
+{
+    
+}
+.albumtop
+{
+    
+}
+.albumname
+{
+    padding: 3%;
+    background: #fff;
+    color:#04af82;
+    border: 1px solid #04af82;
+}
+.albumtitle .titleiconancher
+{
+    padding: 3% 20.1% 3% 20.1%;
+    border:1px solid #04af82;
+    font-size: 180%;
+    text-decoration: none;
+    color:#000;
+    background: #04af82;
+}
+
+.albumtitle .titleiconbutton
+{
+    background:#04af82;
+    
+    font-size: 180%;
+    border:1px solid #04af82;
+    padding: 3% 23.9% 3% 20.2%;
+    
+}
+
+.albumtitle .titleiconbutton:hover
+{
+    padding: 3% 23.9% 3% 19.9%;
+    border:1px solid #04af82;
+    background: #fff;
+    color:#04af82;
+    transition:0.3s;
+    cursor: pointer;
+}
+.albumtitle .titleiconancher:hover
+{
+    padding: 3% 20.1% 3% 20.1%;
+    border:1px solid #04af82;
+    background: #fff;
+    
+    text-decoration: none;
+    transition:0.3s;
+    cursor: pointer;
+}
+.albumtitle .titleiconbutton a
+{
+    color:#000;
+    text-decoration: none;
+}
+.albumtitle .titleiconbutton a:hover
+{
+    color:#04af82;
+}
+.albumimg img
+{
+    width:100%;
+    height:80%;
+}
+.albumfooter
+{
+    background: #04af82;
+}
+.albumfooter div
+{
+    padding: 3% 22.3% 3% 22.3%;
+    margin-top: 1%;
+    float: left;
+    background: #04af82;
+}
+.albumfooter a
+{
+    
+    /*border: 1px solid #04af82;*/
+    font-size: 180%;
+    text-decoration: none;
+    color:#fff;
+    background: #04af82;
+}
+.albumfooter a:hover
+{
+    
+    /*border: 1px solid #04af82;*/
+    background: #fff;
+    color:#04af82;
+    text-decoration: none;
+    transition:0.3s;
+    cursor: pointer;
+}
+
+/*------------Main Part End--------------*/
+
+/*--------------Footer Part Start-----------*/
+
+.foot
+{
+	background: #04af82;
+	color:#fff;
+}
 .footer
 {
-	background:#0FABDD;
-	color:#fff;
-	border-radius:0px 0px 8px 8px;
+	padding: 1% 0% 1% 0%;
+	cursor: default;
 }
+
+/*--------------Footer Part End------------*/
