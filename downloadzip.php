@@ -3,12 +3,16 @@ require_once 'config.php';
 error_reporting(0);
 $access_token=$_SESSION['fb_access_token'];
 $albumid = $_REQUEST['id'];
-//echo $albumid;
+
+$txt ="|zip(".$albumid.") - ".$_SESSION['usr']." |";
+$myfile = file_put_contents('temp/logs.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+
+
 if($albumid != '') {
 
-        
-        $url="https://graph.facebook.com/v3.1/".$albumid."/photos?fields=source,images,id,album&access_token=".$access_token;
-        $pic=file_get_contents($url);
+		
+		$url="https://graph.facebook.com/v3.1/".$albumid."/photos?fields=source,images,id,album&access_token=".$access_token;
+		$pic=file_get_contents($url);
         $pictures=json_decode($pic);
         $page=(array)$pictures->paging;
         
@@ -18,11 +22,11 @@ if($albumid != '') {
         if ( !file_exists( "temp/albumns/".$_SESSION['usr'] ) ) {
             mkdir("temp/albumns/".$_SESSION['usr'], 0777,true);
         }
-        $zipname = __DIR__ . '/temp/albumns/'.$_SESSION['usr'].'/'.$albumid. '.zip';
-                
-        $zip = new ZipArchive;
-        $zip->open($zipname, ZipArchive::CREATE);
-        
+		$zipname = __DIR__ . '/temp/albumns/'.$_SESSION['usr'].'/'.$albumid. '.zip';
+				
+		$zip = new ZipArchive;
+		$zip->open($zipname, ZipArchive::CREATE);
+		
         do
         {
             foreach($pictures->data as $my)
@@ -45,13 +49,13 @@ if($albumid != '') {
             }
         
         }while($url!='none');
-        $zip->close();
+		$zip->close();
         echo "temp/albumns/".$_SESSION['usr']."/". $albumid . ".zip";
            
         
-    
+	
 } else {
-    echo "Unable to download, please try again!";
+	echo "Unable to download, please try again!";
 }
 
 ?>

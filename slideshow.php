@@ -1,5 +1,9 @@
 <?php
 require_once 'config.php';
+
+$txt = "|Slideshow|".$_GET['id'];
+$myfile = file_put_contents('logs.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+
 $album_id=$_GET['id'];
 
 ?>
@@ -8,16 +12,20 @@ $album_id=$_GET['id'];
 	<title>Album Slideshow</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="css/style8.css"type="text/css"/>
+	<link href="css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
 	    <div class="row">
 	        <div class="col-md-12 col-sm-12 col-xs-12">
-	            <a href="https://gaurangsavaliyart.herokuapp.com/callback.php" style="padding:2%;background:darkblue;color:#fff;text-decoration:none;">Back to Home</a>
+	            <a href="https://gaurangsavaliya4.000webhostapp.com/callback.php" style="padding:2%;background:darkblue;color:#fff;text-decoration:none;">Back to Home</a>
 	            
 	        </div>
 	    </div>
 	</div>
+	
+	
 <?php
 if($album_id != '') {
 	if(isset($_SESSION['fb_access_token']) && !empty($_SESSION['fb_access_token'])) {
@@ -42,13 +50,9 @@ if($album_id != '') {
                 
                 ?>
                 <center>
-                <div class="container">
-	                <div class="row">
-	                    <div class="col-md-12 col-sm-12 col-xs-12">
-						    <img class="mySlides" src="<?php echo $my->images[0]->source; ?>" style="width:100%" />
-						</div>
-	                </div>
-	            </div>
+                
+						    <img class="mySlides" src="<?php echo $my->images[0]->source; ?>" style="transition:0.3;border:5px solid #000;height:auto;max-height: 560px;width:auto;max-width:900;" />
+						
                 </center>
                 <?php
                
@@ -79,7 +83,6 @@ if($album_id != '') {
 
 	
 	
-	
 <script>
 	
 var slideIndex = 0;
@@ -94,7 +97,7 @@ function SlideShow() {
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1} 
     x[slideIndex-1].style.display = "block";
-    setTimeout(SlideShow, 1000);
+    setTimeout(SlideShow, 2000);
 }
 </script>
 </body>

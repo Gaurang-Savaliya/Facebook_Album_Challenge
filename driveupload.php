@@ -1,15 +1,19 @@
 <?php
 ob_start();
 require_once 'config.php';
+
+$txt ="|driveupload(".$_SESSION['albumid'].") - ".$_SESSION['usr']." |";
+$myfile = file_put_contents('temp/logs.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+
 if(isset($_SESSION['albumid']))
 {
 
 include_once 'vendor/autoload.php';
 
 $client = new Google_Client();
-$client->setClientId('{Client-Id}');
-$client->setClientSecret('{Client-Secret}');
-$client->setRedirectUri('https://gaurangsavaliyart.herokuapp.com/driveupload.php');
+$client->setClientId('332327935943-416fjeevr8n1bsmfnsh4u15hvdp7r7m2.apps.googleusercontent.com');
+$client->setClientSecret('RIzv0Qy7oypyLQsd_wnMsNF-');
+$client->setRedirectUri('https://gaurangsavaliya4.000webhostapp.com/driveupload.php');
 $client->setScopes(array('https://www.googleapis.com/auth/drive.file'));
 
 
@@ -104,6 +108,6 @@ if (isset($_GET['code']) || (isset($_SESSION['access_token']))) {
     exit();
 }
 }
-header('location:https://gaurangsavaliyart.herokuapp.com/callback.php');
+header('location:https://gaurangsavaliya4.000webhostapp.com/callback.php');
 
 ?>
