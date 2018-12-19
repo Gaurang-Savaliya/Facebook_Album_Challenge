@@ -7,7 +7,7 @@
 
 1) Facebook Graph SDK 
 
---It is used to get contents like users photos, albums and personal details of perticular User.so it requires facebook-php-sdk to communicate with facebook.
+--It is used to get contents like users photos, albums and personal details of perticular User.so it requires facebook-php-sdk to communicate with facebook. 
   Link :- https://github.com/facebook/php-graph-sdk
 
 2) Google Drive API
