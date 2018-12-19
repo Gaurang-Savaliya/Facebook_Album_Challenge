@@ -140,8 +140,7 @@ if (isset($_SESSION['fb_access_token']) && !empty($_SESSION['fb_access_token']))
     $albums = $album_res['albums'];
     $_SESSION['usr']=$album_res['name'];
     
-    $txt ="|Login with facebook - ".$album_res['name']." |";
-    $myfile = file_put_contents('temp/logs.txt', $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
+    
 
 						if(isset($_POST['movealbumall']))
 						    {
